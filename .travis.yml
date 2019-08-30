@@ -7,13 +7,7 @@ services:
 
 before_install:
   - docker pull tobsto/sqylab-ci
-  - docker run tobsto/sqylab-ci /bin/sh -c "bash; \
-        source ~/.profile; \
-        conda create -n sqylab; \
-        conda activate sqylab; \
-        conda install pip; \
-        pip install -r requirements.txt; \
-        "
+  - docker run tobsto/sqylab-ci /bin/bash -c "source ~/.profile; conda create -n sqylab; conda activate sqylab; conda install pip; pip install -r requirements.txt;"
 
 script:
   - pytest
