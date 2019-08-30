@@ -8,7 +8,6 @@ services:
 before_install:
   - docker pull tobsto/sqylab-ci
   - docker run tobsto/sqylab-ci /bin/bash -c "cd ~/; \
-        #. ~/.profile; \
         /root/Programs/miniconda3/bin/conda create -n sqylab; \
         /root/Programs/miniconda3/bin/conda activate sqylab; \
         /root/Programs/miniconda3/bin/conda install pip; \
