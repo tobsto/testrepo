@@ -8,5 +8,6 @@ services:
 install:
   - docker pull tobsto/sqylab-ci
   #- docker run -v /home/travis/build/tobsto/testrepo:/mnt/sqylab tobsto/sqylab-ci /bin/bash -c "source ~/.profile; ls /mnt/sqylab/; echo $PWD;"
-  - docker run -v /home/travis/build/tobsto/testrepo:/mnt/sqylab tobsto/sqylab-ci /bin/bash -c "source ~/.profile; conda create -n sqylab; conda activate sqylab; conda install pip; cd /mnt/sqylab/; pip install -r requirements.txt; pytest"
+  - docker run -v /home/travis/build/tobsto/testrepo:/mnt/sqylab tobsto/sqylab-ci /bin/bash -c "source ~/.profile; \\
+    conda create -n sqylab; conda activate sqylab; conda install pip; cd /mnt/sqylab/; pip install -r requirements.txt; pytest"
 
